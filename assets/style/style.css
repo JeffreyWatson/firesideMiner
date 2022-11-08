@@ -1,1 +1,31 @@
 /* BASIC STYLES HERE */
+body {
+  font-family: 'Silkscreen', cursive;
+  background-image: url(https://images.unsplash.com/photo-1593781243220-51578354c57d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80);
+}
+
+.transparent {
+  background: rgba(14, 47, 9, 0.73);
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
+
+.slime {
+  color: rgb(95, 238, 0);
+}
+
+.title {
+  height: 100px;
+  font-family: 'Silkscreen', cursive;
+  ;
+}
+
+.alien {
+  height: 175px;
+}
+
+.alien-size {
+  height: 150px;
+  width: 150px;
+}
