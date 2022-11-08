@@ -1,4 +1,4 @@
-import { appState } from "../AppState";
+import { appState } from "../AppState.js";
 
 class SlimeService {
 
