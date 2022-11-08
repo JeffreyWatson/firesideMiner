@@ -29,19 +29,37 @@
     </h1>
 
     <div class="row justify-content-between">
-      <div class="col-3 text-center" id="slime-count"></div>
-      <div class="col-3 text-center" id="multiplier"></div>
-      <div class="col-3 text-center" id="quantity"></div>
+      <div class="col-5 text-center" id="slime-count"></div>
+      <div class="col-5 text-center" id="multiplier"></div>
+      <!-- <div class="col-3 text-center" id="quantity"></div> -->
 
     </div>
 
-    <div class="row justify-content-center">
+    <!-- <div class="card">
+      <img src="" alt="">
+      <h6>Name</h6>
+      <p>Price</p>
+      <p>quantity</p>
+      <p>multiplier</p>
+    </div> -->
+
+    <div class="row justify-content-center m-3">
       <div class="col-3 text-center">
+        <!-- data-bs-target needs to match the Id on the modal. The # is necessary here on the target. -->
         <button data-bs-toggle="modal" data-bs-target="#upgradesModal" class="btn btn-success">Upgrades</button>
+      </div>
+    </div>
+
+    <div class="row justify-content-center m-3">
+      <div class="col-3 text-center">
+        <!-- Here as well with the target-->
+        <button data-bs-toggle="modal" data-bs-target="#purchasedModal" class="btn btn-success">Purchased Upgrades</button>
       </div>
     </div>
   </main>
 
+
+  <!-- This is my modal that I took from bootstrap to use in my project. -->
   <div class="modal" id="upgradesModal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -50,6 +68,24 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="upgrades">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Another modal because they are cool -->
+  <div class="modal" id="purchasedModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">PurchasedUpgrades</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="purchased">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

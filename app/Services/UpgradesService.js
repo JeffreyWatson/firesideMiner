@@ -3,14 +3,13 @@ import { appState } from "../AppState.js";
 class UpgradesService {
   purchaseUpgrade(upgradeName) {
     let found = appState.upgrades.find(u => u.name == upgradeName)
-    if (appState.slime >= found?.price) {
-      appState.slime -= found?.price
-      // @ts-ignore
-      found.price += found?.price
-      // @ts-ignore
+    if (!found) { return }
+    if (found.price <= appState.slime) {
+      appState.slime -= found.price
       found.quantity++
-      appState.purchased.push(found)
-      appState.purchased = appState.purchased
+      found.price *= 2
+      found.multiplier++
+      appState.emit('upgrades')
     }
   }
 

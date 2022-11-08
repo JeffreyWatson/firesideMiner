@@ -1,6 +1,7 @@
 import { appState } from "../AppState.js";
 import { Upgrade } from "../Models/Upgrade.js";
 import { upgradesService } from "../Services/UpgradesService.js";
+import { setHTML } from "../Utils/Writer.js";
 
 function _drawUpgrades() {
   let template = ''
@@ -13,10 +14,19 @@ function _drawUpgrades() {
   document.getElementById('upgrades').innerHTML = template
 }
 
+function _drawPurchased() {
+  let mine = appState.upgrades
+  let template = ''
+  mine.forEach(m => template += m.purchasedTemplate)
+  setHTML('purchased', template)
+}
+
 export class UpgradesController {
   constructor() {
-    appState.on("purchased", _drawUpgrades)
+    appState.on("upgrades", _drawUpgrades)
+    appState.on("upgrades", _drawPurchased)
     _drawUpgrades()
+    _drawPurchased()
   }
 
   purchaseUpgrade(upgradeName) {
