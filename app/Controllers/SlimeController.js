@@ -19,12 +19,25 @@ function _drawMultiplier() {
   `
 }
 
+function _drawQuantity() {
+  let quantity = 0
+  appState.purchased.forEach(p => {
+    quantity += p.quantity
+  })
+  // @ts-ignore
+  document.getElementById('quantity').innerHTML = /*html*/ `
+  <h4>Quantity: ${quantity}</h4>
+  `
+}
+
 export class SlimeController {
   constructor() {
     appState.on("slime", _drawSlime)
     appState.on("purchased", _drawMultiplier)
+    appState.on("purchased", _drawQuantity)
     _drawMultiplier()
     _drawSlime()
+    _drawQuantity()
   }
 
   mine() {
