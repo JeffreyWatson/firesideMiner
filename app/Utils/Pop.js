@@ -79,10 +79,10 @@ export class Pop {
   static success(message = 'Success!') {
     this.toast(message, 'success')
   }
-  
-    /**
-   * @param { string } title The prompt message to display.
-   */
+
+  /**
+ * @param { string } title The prompt message to display.
+ */
   static async prompt(title = 'Success!', required = false) {
     try {
       // @ts-ignore

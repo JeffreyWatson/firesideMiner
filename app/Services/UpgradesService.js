@@ -8,7 +8,8 @@ class UpgradesService {
       appState.slime -= found.price
       found.quantity++
       found.price *= 2
-      found.multiplier++
+      // The line below is what we do to trick the listener and alternatively we can use appState.emit('arrayName') like on line 13.
+      // appState.upgrades = appState.upgrades
       appState.emit('upgrades')
     }
   }

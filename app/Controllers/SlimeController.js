@@ -9,15 +9,15 @@ function _drawSlime() {
 }
 
 function _drawMultiplier() {
-  let multiplier = 0
+  let multiplier = 1
   appState.upgrades.forEach(u => {
     if (u.quantity > 0) {
-      multiplier += u.multiplier
+      multiplier += u.multiplier * u.quantity
     }
   })
   // @ts-ignore
   document.getElementById('multiplier').innerHTML = /*html*/ `
-  <h4>Current Multiplier: ${multiplier}</h4>
+  <h4>Current ClickCount: ${multiplier}</h4>
   `
 }
 

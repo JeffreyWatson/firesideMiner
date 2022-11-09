@@ -15,6 +15,11 @@ body {
   color: rgb(95, 238, 0);
 }
 
+.upgrades {
+  height: 250px;
+  width: 250px;
+}
+
 .title {
   height: 100px;
   font-family: 'Silkscreen', cursive;
